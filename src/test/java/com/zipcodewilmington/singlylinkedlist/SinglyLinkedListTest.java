@@ -88,10 +88,10 @@ public class SinglyLinkedListTest {
        
         String expected = "target";
 
-        list.add("");
-        list.add(expected);
+        list.add("pizza");
+        list.add("target");
 
-        Integer actual = list.get(1);
+        String actual = list.get(1);
 
         Assert.assertEquals(expected, actual);
 
@@ -108,7 +108,7 @@ public class SinglyLinkedListTest {
         Assert.assertNotEquals(list.toString(),newList.toString());
         
         for(int i = 0; i < list.size(); i++){
-            Assert.assertEquals(list.get(i).getData(), newList.get(i).getData());
+            Assert.assertEquals(list.get(i), newList.get(i));
         }
     }
 
@@ -120,9 +120,9 @@ public class SinglyLinkedListTest {
         
         list.sort();
         
-        Assert.assertEquals(list.get(0).getData(), "blitz");
-        Assert.assertEquals(list.get(1).getData(), "lux");
-        Assert.assertEquals(list.get(2).getData(), "morgana");
+        Assert.assertEquals(list.get(0), "blitz");
+        Assert.assertEquals(list.get(1), "lux");
+        Assert.assertEquals(list.get(2), "morgana");
         
     }
 }
